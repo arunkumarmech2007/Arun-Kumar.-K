@@ -1,94 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Arunkumar Portfolio</title>
+    <title>ArunKumar Portfolio</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            color: #FFD700; /* Gold text */
+            color: white;
             text-align: center;
             overflow-x: hidden;
+            background: #0d1117;
         }
 
-        /* Animated Gradient Background */
-        body::before {
-            content: "";
+        /* Mouse Glow Effect */
+        .cursor-glow {
             position: fixed;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, #000000, #1a1a1a, #333333, #000000);
-            background-size: 400% 400%;
-            animation: gradientMove 10s ease infinite;
-            z-index: -2;
-        }
-
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Floating Circles */
-        .circle {
-            position: fixed;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(0,255,204,0.3) 0%, transparent 70%);
             border-radius: 50%;
-            background: rgba(255, 215, 0, 0.2); /* Gold glow */
-            animation: float 10s infinite;
-            z-index: -1;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 0;
         }
 
-        .circle:nth-child(1) {
-            width: 100px;
-            height: 100px;
-            left: 10%;
-            animation-duration: 12s;
-        }
-
-        .circle:nth-child(2) {
-            width: 150px;
-            height: 150px;
-            left: 70%;
-            animation-duration: 15s;
-        }
-
-        .circle:nth-child(3) {
-            width: 80px;
-            height: 80px;
-            left: 40%;
-            animation-duration: 10s;
-        }
-
-        @keyframes float {
-            0% { top: 100%; }
-            100% { top: -10%; }
-        }
-
-        h1 {
-            color: #FFD700;
-            margin-top: 40px;
-            font-size: 40px;
-            text-shadow: 0 0 15px #FFD700;
-        }
-
+        /* Glass Effect */
         .box {
             margin: 20px auto;
             padding: 20px;
             width: 80%;
-            border-radius: 15px;
-            background: rgba(20, 20, 20, 0.8); /* Dark glass */
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 15px #FFD700;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 0 20px rgba(0,255,204,0.3);
             transition: 0.3s;
+            position: relative;
+            z-index: 1;
         }
 
         .box:hover {
             transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0,255,204,0.6);
+        }
+
+        h1 {
+            color: #00ffcc;
+            margin-top: 40px;
+            font-size: 40px;
+            text-shadow: 0 0 15px #00ffcc;
+            position: relative;
+            z-index: 1;
         }
 
         a {
-            color: #FFD700;
+            color: #00ffcc;
             text-decoration: none;
         }
 
@@ -96,24 +63,25 @@
             width: 150px;
             border-radius: 50%;
             margin-top: 20px;
-            border: 2px solid #FFD700;
+            z-index: 1;
+            position: relative;
         }
 
         footer {
             margin-top: 30px;
-            color: #FFD700;
+            color: #aaa;
+            position: relative;
+            z-index: 1;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Animated circles -->
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+    <!-- Mouse Glow -->
+    <div class="cursor-glow" id="glow"></div>
 
-    <h1>🔥 Hi, I'm Arunkumar</h1>
+    <h1>🔥 Hi, I'm ArunKumar</h1>
 
     <img src="profile.jpg" alt="Profile Photo">
 
@@ -141,23 +109,32 @@
 
     <div class="box">
         <h2>📄 Resume</h2>
-        <a href="resume.pdf" target="_blank">Download Resume</a>
+        <a href="resume.pdf">Download Resume</a>
     </div>
 
     <div class="box">
         <h2>📞 Contact</h2>
         <p>📱 Mobile: 9342257368</p>
-        <p>📧 Email: arunkumar230222007@gmail.com</p>
+        <p>📧 Email: arunkumar23022007@gmail.com</p>
         <p>🌐 GitHub: 
-            <a href="https://github.com/ARUNKUMAR" target="_blank">
-                github.com/ARUNKUMAR
+            <a href="https://github.com/gokulakannan">
+                github.com/arunkumar
             </a>
         </p>
     </div>
 
     <footer>
-        😎 Designed by Arunkumar | 2026
+        😎 Designed by ArunKumar | 2026
     </footer>
 
+    <script>
+        const glow = document.getElementById("glow");
+
+        document.addEventListener("mousemove", (e) => {
+            glow.style.left = e.clientX + "px";
+            glow.style.top = e.clientY + "px";
+        });
+    </script>
+
 </body>
-</html>        
+</html>
