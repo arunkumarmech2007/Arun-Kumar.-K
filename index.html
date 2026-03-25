@@ -7,7 +7,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            color: black;
+            color: #FFD700; /* Gold text */
             text-align: center;
             overflow-x: hidden;
         }
@@ -18,7 +18,7 @@
             position: fixed;
             width: 200%;
             height: 200%;
-            background: linear-gradient(45deg, #0d1117, #00ffcc, #1f2937, #00ffcc);
+            background: linear-gradient(45deg, #000000, #1a1a1a, #333333, #000000);
             background-size: 400% 400%;
             animation: gradientMove 10s ease infinite;
             z-index: -2;
@@ -34,7 +34,7 @@
         .circle {
             position: fixed;
             border-radius: 50%;
-            background: rgba(0,255,204,0.2);
+            background: rgba(255, 215, 0, 0.2); /* Gold glow */
             animation: float 10s infinite;
             z-index: -1;
         }
@@ -66,10 +66,10 @@
         }
 
         h1 {
-            color: #00ffcc;
+            color: #FFD700;
             margin-top: 40px;
             font-size: 40px;
-            text-shadow: 0 0 10px #00ffcc;
+            text-shadow: 0 0 15px #FFD700;
         }
 
         .box {
@@ -77,9 +77,9 @@
             padding: 20px;
             width: 80%;
             border-radius: 15px;
-            background: rgba(0,0,0,0.6);
+            background: rgba(20, 20, 20, 0.8); /* Dark glass */
             backdrop-filter: blur(10px);
-            box-shadow: 0 0 15px #00ffcc;
+            box-shadow: 0 0 15px #FFD700;
             transition: 0.3s;
         }
 
@@ -88,7 +88,7 @@
         }
 
         a {
-            color: #00ffcc;
+            color: #FFD700;
             text-decoration: none;
         }
 
@@ -96,11 +96,12 @@
             width: 150px;
             border-radius: 50%;
             margin-top: 20px;
+            border: 2px solid #FFD700;
         }
 
         footer {
             margin-top: 30px;
-            color: #ccc;
+            color: #FFD700;
         }
     </style>
 </head>
@@ -140,7 +141,7 @@
 
     <div class="box">
         <h2>📄 Resume</h2>
-        <a href="resume.pdf">Download Resume</a>
+        <a href="resume.pdf" target="_blank">Download Resume</a>
     </div>
 
     <div class="box">
@@ -148,7 +149,7 @@
         <p>📱 Mobile: 9342257368</p>
         <p>📧 Email: arunkumar230222007@gmail.com</p>
         <p>🌐 GitHub: 
-            <a href="https://github.com/ARUNKUMAR">
+            <a href="https://github.com/ARUNKUMAR" target="_blank">
                 github.com/ARUNKUMAR
             </a>
         </p>
@@ -159,4 +160,4 @@
     </footer>
 
 </body>
-</html>
+</html>        
